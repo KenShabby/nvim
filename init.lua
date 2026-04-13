@@ -71,6 +71,7 @@ vim.o.confirm = true
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('i', 'kj', '<Esc>', { desc = 'Exit insertmode' })
 
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts

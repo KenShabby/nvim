@@ -8,7 +8,7 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
   },
   lazy = false,
@@ -22,6 +22,15 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['P'] = {
+            'toggle_preview',
+            config = {
+              use_float = false,
+              use_image_nvim = true,
+              use_snacks_image = true,
+              title = 'Neo-tree Preview',
+            },
+          },
         },
         position = 'right',
         width = 25,
