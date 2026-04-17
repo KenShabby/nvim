@@ -118,17 +118,10 @@ return {
     --  See `:help lsp-config` for information about keys and how to configure
     ---@type table<string, vim.lsp.Config>
     local servers = {
-      -- clangd = {},
-      -- gopls = {},
-      -- pyright = {},
+      clangd = {},
+      gopls = {},
+      pyright = {},
       -- rust_analyzer = {},
-      --
-      -- Some languages (like typescript) have entire language plugins that can be useful:
-      --    https://github.com/pmizio/typescript-tools.nvim
-      --
-      -- But for many setups, the LSP (`ts_ls`) will work just fine
-      -- ts_ls = {},
-
       stylua = {}, -- Used to format Lua code
 
       -- Special Lua Config, as recommended by neovim help docs
@@ -161,12 +154,6 @@ return {
       },
     }
 
-    -- Ensure the servers and tools above are installed
-    --
-    -- To check the current status of installed tools and/or manually install
-    -- other tools, you can run
-    --    :Mason
-    --
     -- You can press `g?` for help in this menu.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
