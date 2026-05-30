@@ -13,6 +13,11 @@ vim.g.have_nerd_font = true
 vim.o.relativenumber = true
 vim.o.number = true
 
+-- Make some Claude suggested fold defaults
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
