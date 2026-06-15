@@ -3,7 +3,6 @@ return { -- Highlight, edit, and navigate code
   lazy = false,
   build = ':TSUpdate',
   branch = 'main',
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
   config = function()
     -- ensure basic parser are installed
     local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
