@@ -111,6 +111,12 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = 'templ',
   callback = function() vim.treesitter.start() end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.cpp,*.hpp',
+  callback = function() vim.lsp.buf.format { async = false } end,
+})
+
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
