@@ -153,3 +153,5 @@ require('lazy').setup({
     },
   },
 })
+
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open [E]rror message' })
