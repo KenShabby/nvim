@@ -1,1 +1,4 @@
-return {}
+return {
+  'ThePrimeagen/htmx-lsp/',
+  opts = {},
+}
